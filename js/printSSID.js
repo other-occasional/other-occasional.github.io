@@ -122,7 +122,7 @@
 
     function setText() {
         console.log("settext")
-        document.getElementById("telia-text").innerHTML = window.numQueue
+        document.getElementById("printarea").innerHTML = window.numQueue
         window.numQueue=[];
     }
     
