@@ -142,7 +142,7 @@
                 console.log("cleared");
             }
             */
-            if (true) {
+            if (e.key != "SHIFT") {
                 numQueue.push(e.key)
             }
 
