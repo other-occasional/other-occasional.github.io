@@ -101,7 +101,10 @@ function TokenSigning() {
 </body></html>
 <style>
     @media print {
-   body *, #main * { display:none; }
-   #main, #main #printarea, #main #printarea *,#printarea *, #printarea { display:block; }
+    @page { margin: 0; }
+    body *, #main * { display:none; }
+    #main, #main #printarea, #main #printarea *,#printarea *, #printarea { display:block; }
+    #header, #nav, .noprint { display: none;
+    }
 }
 </style>

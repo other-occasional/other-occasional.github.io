@@ -121,29 +121,46 @@
     }
 
     function setText() {
-        console.log("settext")
-        document.getElementById("printarea").innerHTML = window.numQueue
+        //ignore random keystrokes
+        if (window.numQueue.length<6) {
+            window.numQueue = [];
+            return
+        }
+        document.getElementById("printarea").innerHTML = ""
+        document.getElementById("printarea").appendChild(ElementFromText( window.numQueue))
         window.numQueue=[];
     }
-    
+
+
+    function ElementFromText(scannedText) {
+        var infodiv = document.createElement("div")
+        
+        scannedText = scannedText.split(";")
+        for (i=0;i<scannedText.length;i++) {
+            var line = scannedText[i];
+
+            if (!line.search("SSID"))    {
+                scannedText[i] = "SSID: Zyxel_78F6"
+            }   
+
+            var finalLine = document.createElement("div");
+            finalLine.innerHTML = scannedText[i];
+            infodiv.appendChild(finalLine);
+        }
+        return infodiv
+    }
+
 
     function setKeyHandler() {
         //rewrote conditions so all characters are accepted
         window.queueFunction = function() {}
-        window.numQueue = []
+        window.numQueue = ""
         document.onkeydown = function(e) {
-            console.log(e.key)
-            console.log(numQueue)
             window.clearTimeout(window.queueFunction)
                 
             window.queueFunction =window.setTimeout(setText,1000)
-            /*
-            if (e.key==="Clear") {
-                console.log("cleared");
-            }
-            */
             if (e.key != "Shift") {
-                numQueue.push(e.key)
+                numQueue += (e.key)
             }
 
 
