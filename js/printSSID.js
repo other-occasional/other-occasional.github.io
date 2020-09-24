@@ -159,7 +159,7 @@
             window.clearTimeout(window.queueFunction)
                 
             window.queueFunction =window.setTimeout(setText,1000)
-            if (e.key != "Shift") {
+            if ((e.key != "Shift")&&(e.key != "Enter")) {
                 numQueue += (e.key)
             }
 

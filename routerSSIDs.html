@@ -82,15 +82,11 @@ function TokenSigning() {
 }</script></head>
 
 <body>
-<h1>Print from QR code</h1> 
-<div>Just keep this page active and scan. try connecting your printer when something doesn't work – text with print button for troubleshooting</div> 
-    <div id="textDiv">
-        <label for="textTextArea"></label><br>
-        <textarea name="textTextArea" id="textTextArea" rows="5" cols="40"></textarea>
-    </div>
-
+<h1>Router labels</h1> 
+<div>Scan and print substituted telia router SSID's</div> 
         <div id="printDiv">
-            <button id="printButton">Print</button>
+            
+            <button id="print" onclick="window.print()">Print</button>
         </div>
     <div id="printarea">
     </div>
