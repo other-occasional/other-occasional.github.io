@@ -96,20 +96,40 @@ function TokenSigning() {
 
 </body></html>
 <style>
+	#printarea {
+		border: 1px solid black;
+    	margin: 0 !important;
+    	max-height: 12.5mm !important;
+    	max-width: 37.9mm !important;
+    	top: 0;
+        width: 38mm;
+        height: 12.6mm;
+        size:38mm 12.6mm;
+        font-size: 4pt;
+        padding-left: 5mm;
+        font-family: sans-serif;
+	}
     @media print {
         @page { margin: 0; 
-                width: 38mm;
-                height: 29.7mm;
-                size:38mm 29.7mm;
+                width: 38.1mm;
+                height: 12.7mm;
+                size:38.1mm 12.7mm;
 
         }
         body *, #main * { display:none; }
         #main, #main #printarea, #main #printarea *,#printarea *, #printarea { display:block; }
         #header, #nav, .noprint { display: none;}
         #printarea {
+        	margin: 0 !important;
+        	max-height: 12.5mm !important;
+        	max-width: 37.9mm !important;
+        	top: 0;
             width: 38mm;
-            height: 29.7mm;
-            size:38mm 29.7mm;
+            height: 12.6mm;
+            size:38mm 12.6mm;
+            font-size: 4pt;
+            padding-left: 5mm;
+            font-family: sans-serif;
         }
 
 }
