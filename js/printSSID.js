@@ -23,8 +23,9 @@
     function onload()
     {
         var textTextArea = document.getElementById('textTextArea');
+        
+        /*
         var printButton = document.getElementById('printButton');
-
         // prints the label
         printButton.onclick = function()
         {
@@ -65,8 +66,8 @@
                 alert(e.message || e);
             }
         }
+    */
     };
-
    function initTests()
 	{
 		if(dymo.label.framework.init)

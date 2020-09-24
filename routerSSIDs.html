@@ -97,10 +97,20 @@ function TokenSigning() {
 </body></html>
 <style>
     @media print {
-    @page { margin: 0; }
-    body *, #main * { display:none; }
-    #main, #main #printarea, #main #printarea *,#printarea *, #printarea { display:block; }
-    #header, #nav, .noprint { display: none;
-    }
+        @page { margin: 0; 
+                width: 38mm;
+                height: 29.7mm;
+                size:38mm 29.7mm;
+
+        }
+        body *, #main * { display:none; }
+        #main, #main #printarea, #main #printarea *,#printarea *, #printarea { display:block; }
+        #header, #nav, .noprint { display: none;}
+        #printarea {
+            width: 38mm;
+            height: 29.7mm;
+            size:38mm 29.7mm;
+        }
+
 }
 </style>
