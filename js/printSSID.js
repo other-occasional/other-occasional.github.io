@@ -22,6 +22,12 @@
     // called when the document completly loaded
     function onload()
     {
+        $('#slidervalue').text($('#slider').val());   
+        $('#slider').on('input', function() {
+          var v = $(this).val();
+          $('#printarea').css('font-size', v + 'pt');
+          $('#slidervalue').text(v);
+        });
         var textTextArea = document.getElementById('textTextArea');
         
         /*
