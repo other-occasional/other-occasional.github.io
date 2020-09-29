@@ -71,10 +71,20 @@
    function initTests()
 	{
         $('#slidervalue').text($('#slider').val());   
+        $('#printarea').css('font-size', $('#slider').val() + 'pt');
         $('#slider').on('input', function() {
           var v = $(this).val();
           $('#printarea').css('font-size', v + 'pt');
           $('#slidervalue').text(v);
+        });
+        
+        $('#marginvalue').text($('#slider-margin').val()); 
+        $("#printarea").css('padding-left', $('#slider-margin').val() + 'pt');
+        $('#slider-margin').on('input', function() {
+          console.log("slider margin")
+          var v = $(this).val();
+          $('#printarea').css('padding-left', v + 'pt');
+          $('#marginvalue').text(v);
         });
 
 		if(dymo.label.framework.init)
