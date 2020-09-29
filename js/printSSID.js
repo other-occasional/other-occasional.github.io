@@ -70,6 +70,8 @@
     };
    function initTests()
 	{
+
+        /*
         $('#slidervalue').text($('#slider').val());   
         $('#printarea').css('font-size', $('#slider').val() + 'pt');
         $('#slider').on('input', function() {
@@ -86,7 +88,7 @@
           $('#printarea').css('padding-left', v + 'pt');
           $('#marginvalue').text(v);
         });
-
+        */
 		if(dymo.label.framework.init)
 		{
             setKeyHandler()
@@ -147,6 +149,7 @@
         document.getElementById("printarea").innerHTML = ""
         document.getElementById("printarea").appendChild(ElementFromText( window.numQueue))
         window.numQueue=[];
+        window.print()
     }
 
 
