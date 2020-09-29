@@ -109,14 +109,14 @@ function TokenSigning() {
 	}
     @media print {
         @page { 
-            size:29.7mm 120mm;
+            size:120mm 29.7mm;
         }
 
         body *, #main * { display:none; }
         #main, #main #printarea, #main #printarea *,#printarea *, #printarea { display:block; }
         #header, #nav, .noprint { display: none;}
         #printarea {
-            writing-mode: vertical-rl;
+            /*writing-mode: vertical-rl;*/
         }
 
 }
