@@ -89,7 +89,7 @@ function TokenSigning() {
 <div>Current text size: <span id="slidervalue"></span></div>
 <input type="range" min="3" max="32" step="0.5" id="slider" />
 <div>Left padding: <span id="marginvalue"></span></div>
-<input type="range" min="3" max="64" step="2" id="slider-margin" />
+<input type="range" min="0" max="64" step="2" id="slider-margin" />
 
         <div id="printDiv">
 
@@ -109,7 +109,7 @@ function TokenSigning() {
 	}
     @media print {
         @page { 
-            size:120mm 29.7mm;
+            size:100mm 29.7mm;
         }
 
         body *, #main * { display:none; }
