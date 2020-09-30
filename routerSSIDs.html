@@ -86,6 +86,7 @@ function TokenSigning() {
 <body>
 <h1>Router labels</h1> 
 <div>Scan and print substituted telia router SSID's</div> 
+<div>Reminder: change your keyboard language to EN if weird characters appear</div>
 <div class="controls">Current text size: <span id="slidervalue"></span></div>
 <input class="controls" type="range" min="3" max="32" step="0.5" id="slider" />
 <div class="controls">Left padding: <span id="marginvalue"></span></div>
@@ -103,10 +104,15 @@ function TokenSigning() {
 
 </body></html>
 <style>
+    body {
+        font-family: sans-serif;
+
+    }
 	#printarea {
     	margin: 0 !important;
         font-family: sans-serif;
         font-size: 4pt !important;
+        padding-left: 8pt !important;
 	}
     .controls {
             display: none !important;

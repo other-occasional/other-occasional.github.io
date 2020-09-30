@@ -161,7 +161,7 @@
             var line = scannedText[i];
 
             if (!line.search("SSID"))    {
-                scannedText[i] = "SSID: Zyxel_78F6"
+                scannedText[i] = scannedText[i].replace("Telia_","Zyxel_");
             }   
 
             var finalLine = document.createElement("div");
